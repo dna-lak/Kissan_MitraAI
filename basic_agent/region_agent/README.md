@@ -22,6 +22,7 @@ ADK Web Ready: Project structure is optimized for immediate deployment and testi
 
 The project maintains a modular structure, separating roles for clarity and maintainability:
 
+```
 basic_agent/region_agent/
 ├──sub_pipeline/
 |   ├──sub_pipeline.py
@@ -35,7 +36,7 @@ basic_agent/region_agent/
 │   ├── weather_data.csv    # Climate and soil data by region.
 │   ├── crop_suitability.csv# Crop requirements data.
 │   └── crop_sales.csv      # Historical average revenue by crop type.
-
+```
 
 **Setup and Installation**
 
