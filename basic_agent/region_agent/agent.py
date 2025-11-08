@@ -5,13 +5,9 @@ from google.adk.agents import Agent
 # Import the main pipeline and constants
 from .sub_pipeline.sub_pipeline import sub_pipeline
 from .data_setup import STATE_KEY_NAME, REGIONS
-#import asyncio
- # To ensure data files are created
-
-# --- 1. Define Models ---
 
 
-# --- 2. Define the Root Agent (The Conductor) ---
+
 root_agent = Agent(
     name="region_agent",
     model="gemini-2.5-flash",

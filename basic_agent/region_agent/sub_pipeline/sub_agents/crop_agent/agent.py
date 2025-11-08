@@ -36,10 +36,10 @@ def determine_best_crop(tool_context: ToolContext) -> dict:
         summer_crop_scores = {}
         best_crop_cycle = {}
         
-        # Extract and validate weather data keys (assuming keys like Avg_Summer_Temp_C exist in WEATHER_FILE)
+        # Extract and validate weather data keys 
         avg_summer_temp = weather.get('Avg_Summer_Temp_C', 0)
         avg_winter_temp = weather.get('Avg_Winter_Temp_C', 0)
-        # precipitation = weather.get('Precipitation', 0) # Not used in the scoring logic below
+
         soil_type_str = weather.get('Soil_Type', '').lower()
         climate_zone = weather.get('Climate_Zone', '')
         
@@ -48,7 +48,7 @@ def determine_best_crop(tool_context: ToolContext) -> dict:
 
         for _, row in crop_df.iterrows():
             
-            # Initialized correctly here for each crop iteration
+           
             summer_score = 0 
             winter_score = 0
             
@@ -69,10 +69,10 @@ def determine_best_crop(tool_context: ToolContext) -> dict:
 
             # --- Score 2: Humidity Match (using +/- 5 tolerance) ---
             target_humidity = row.get('Humidity', 0)
-            max_humidity = row.get('MaxHumidity', 100) # Added max humidity check for original logic
+           
             
-            # The original logic was complex/had errors, simplifying to a general humidity match:
-            if (target_humidity - 5) <= climate_humidity <= (max_humidity + 5):
+            
+            if (target_humidity - 5) <= climate_humidity <= (target_humidity + 5):
                 summer_score += 1
                 winter_score += 1
             else:
@@ -102,7 +102,7 @@ def determine_best_crop(tool_context: ToolContext) -> dict:
                 summer_score -= 1
                 winter_score -= 1
 
-            # Store scores (assuming 'Crop_Type' is the correct column name for the crop)
+            # Store scores 
             crop_type = row.get('Crop_Type', row.get('Crop', 'Unknown')) 
             winter_crop_scores[crop_type] = winter_score
             summer_crop_scores[crop_type] = summer_score
@@ -112,7 +112,7 @@ def determine_best_crop(tool_context: ToolContext) -> dict:
         sorted_winter_scores = dict(sorted(winter_crop_scores.items(), key=lambda item: item[1], reverse=True))
         sorted_summer_scores = dict(sorted(summer_crop_scores.items(), key=lambda item: item[1], reverse=True))
         
-        # Extract top 3 crops, handling cases with fewer than 3 entries
+        # Extract top 3 crops
         best_summer_crops = list(sorted_summer_scores.keys())[:3] 
         best_winter_crops = list(sorted_winter_scores.keys())[:3]
         
@@ -128,7 +128,7 @@ def determine_best_crop(tool_context: ToolContext) -> dict:
         
         tool_context.state[RECOMMENDATION_KEY_NAME] = final_result
 
-        # Return a success dictionary
+ 
         return {
             "status": "success",
             "message": "Crop determination logic executed successfully.",
@@ -137,7 +137,7 @@ def determine_best_crop(tool_context: ToolContext) -> dict:
         
     except Exception as e:
         return {"status": "error", "error_message": f"Error calculating crop recommendation: {e}"}
-# --- Agent Definition ---
+
 crop_agent = Agent(
     name="crop_agent",
     model='gemini-2.5-flash',

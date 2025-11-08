@@ -5,7 +5,7 @@ from google.adk.tools import FunctionTool
 
 import pandas as pd
 from google.adk.tools import ToolContext
-# Note: ToolResult import removed
+
 
 from ....data_setup import STATE_KEY_NAME, WEATHER_KEY_NAME, RECOMMENDATION_KEY_NAME, WEATHER_CSV_PATH, CROP_CSV_PATH, REGIONS
 
@@ -25,7 +25,7 @@ def get_avg_weather(tool_context: ToolContext) -> dict:
     region_key = tool_context.state.get(STATE_KEY_NAME)
 
     if not region_key or region_key not in REGIONS:
-        # Return an error dictionary instead of ToolResult
+    
         return {"status": "error", "error_message": f"Region key '{region_key}' is invalid or missing in state. Cannot proceed."}
 
     try:
@@ -53,15 +53,14 @@ def get_avg_weather(tool_context: ToolContext) -> dict:
         }
         
     except Exception as e:
-        # 🔑 THIS IS THE CRITICAL DEBUGGING SECTION:
-        # 1. Print the full traceback to the execution logs
+
         print("\n--- TOOL EXECUTION ERROR DEBUG ---")
         print(f"Exception Type: {type(e).__name__}")
         print(f"Error Details: {str(e)}")
         print(f"Full Traceback:\n{traceback.format_exc()}")
         print("---------------------------------\n")
 
-        # 2. Return an error message indicating a processing failure
+  
         return {"status": "error", "error_message": "Internal data processing error. See logs for details."}
 
 
