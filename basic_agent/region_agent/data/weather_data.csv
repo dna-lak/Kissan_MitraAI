@@ -1,0 +1,37 @@
+Region,Soil_Type,Climate_Zone,Precipitation_mm,Avg_Summer_Temp_C,Avg_Winter_Temp_C
+Andhra Pradesh,Red & Black Soil,Tropical Wet-Dry,1100,30,20
+Arunachal Pradesh,Mountain Soil,Humid Subtropical,3000,22,5
+Assam,Alluvial Soil,Humid Subtropical,2500,34,18
+Bihar,Alluvial Soil,Subtropical,1100,34,18
+Chhattisgarh,Red & Laterite Soil,Tropical Wet-Dry,1300,34,18
+Goa,Laterite Soil,Tropical Monsoon,2800,30,20
+Gujarat,Black & Alluvial Soil,Arid/Tropical Wet-Dry,900,34,18
+Haryana,Alluvial Soil,Subtropical Semi-Arid,600,34,18
+Himachal Pradesh,Mountain Soil,Humid Subtropical/Alpine,1800,22,5
+Jharkhand,Red & Laterite Soil,Tropical Wet-Dry,1100,34,18
+Karnataka,Red & Black Soil,Tropical Monsoon,1400,34,18
+Kerala,Laterite Soil,Tropical Monsoon,3000,34,18
+Madhya Pradesh,Black Soil,Tropical Wet-Dry,1100,34,18
+Maharashtra,Black Soil,Tropical Monsoon,1200,34,18
+Manipur,Red & Yellow Soil,Humid Subtropical,2000,34,18
+Meghalaya,Laterite & Red Soil,Humid Subtropical,3500,34,18
+Mizoram,Red & Yellow Soil,Humid Subtropical,2200,34,18
+Nagaland,Red & Yellow Soil,Humid Subtropical,2000,34,18
+Odisha,Laterite & Red Soil,Tropical Monsoon,1400,30,20
+Punjab,Alluvial Soil,Subtropical Semi-Arid,600,34,18
+Rajasthan,Arid/Desert Soil,Arid/Desert,400,38,14
+Sikkim,Mountain Soil,Humid Subtropical/Alpine,3000,22,5
+Tamil Nadu,Red Soil,Tropical Wet-Dry,1000,34,18
+Telangana,Red & Black Soil,Tropical Wet-Dry,1000,34,18
+Tripura,Laterite & Alluvial Soil,Humid Subtropical,2200,34,18
+Uttar Pradesh,Alluvial Soil,Subtropical,1000,34,18
+Uttarakhand,Mountain Soil,Humid Subtropical/Alpine,2000,22,5
+West Bengal,Alluvial & Laterite Soil,Tropical Monsoon,1800,22,5
+Andaman and Nicobar Islands,Alluvial Soil,Tropical Wet,3000,32,12
+Chandigarh,Alluvial Soil,Subtropical,1100,34,18
+Dadra and Nagar Haveli and Daman and Diu,Lateritic soil,Tropical Wet-Dry,2000,32,12
+Delhi,Alluvial Soil,Subtropical Semi-Arid,700,34,18
+Jammu and Kashmir,Alluvial Soil,Temperate/Alpine,1100,32,12
+Ladakh,Cold Desert Soil,Cold Desert/Alpine,100,22,5
+Lakshadweep,Coral & Sandy Soil,Tropical Maritime,1700,34,18
+Puducherry,Coastal Alluvial Soil,Tropical Wet-Dry,1400,34,18

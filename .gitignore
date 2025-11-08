@@ -1,0 +1,13 @@
+
+__pycache__/
+*.pyc
+*.o
+*.pyd
+.venv/
+venv/
+
+.env
+.DS_Store
+
+.adk_cache/
+*.log
